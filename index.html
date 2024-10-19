@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Custom HLS Controls</title>
+        <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <link rel="stylesheet" href="tvStyle.css">
+
+    </head>
+
+    <body>
+        <div id="controlsContainer">
+            <video id="video"></video>
+
+            <!-- Preloader start-->
+            <div id="preloader">
+                <div class="spinner"></div>
+            </div>
+            <!-- Preloader end-->
+            
+            <div class="custom-controls">
+                <!-- for video proges bar start -->
+                <div id="progressBarContainer">
+                    <div id="progressBar"></div>
+                </div>
+                <!-- video progress bar end -->
+
+                <input type="range" id="volumeSlider" min="0" max="1" step="0.1" value="1">
+                <div class="vol_and_liv">
+                    <i id="playPauseBtn" class="fas fa-play control-button"></i>
+                    <i id="volumeIcon" class="fas fa-volume-up" style="color: white;"></i>
+                    <div id="liveBtn">LIVE</div>
+                </div>
+                
+                <div class="play_ps">
+                    
+                </div>
+                <div class="time_and_expan">
+                    <span id="currentTime" class="control-button">0:00</span>
+                    <i id="speedIcon" class="fas fa-tachometer-alt" style="color: white;"></i>
+                    <i id="resIcon" class="fa-solid fa-gear" style="color: white;"></i>
+                    <i id="captionIcon" class="fas fa-closed-captioning" style="color: white;"></i>
+                    <i id="languageIcon" class="fas fa-globe" style="color: white;"></i>
+                    
+                    
+
+                    <i id="full" class="fas fa-expand" style="color: white;"></i>
+                </div>
+            </div>
+
+            <!-- Live Button -->
+
+            <!-- Play/pause button in the center of the video -->
+            <i id="posterPlayPauseBtn" class="fas fa-play"></i>
+
+<!--all crontrols dropdown start-->
+            <div id="audioDropdown"></div>
+            <div id="captionDropdown"></div>
+            <div id="resDropdown"></div>
+            <div id="speedDropdown">
+                <div class="option" data-speed="0.5">0.5x</div>
+                <div class="option" data-speed="1">Normal</div>
+                <div class="option" data-speed="1.5">1.5x</div>
+                <div class="option" data-speed="2">2x</div>
+            </div>
+<!--all crontrols dropdown end-->
+
+        </div>
+
+<script src="tvScript.js"></script>
+
+    </body>
+
+</html>
